@@ -1,1 +1,1 @@
-export * from './component/Converter/Converter';
+export * from './';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Converter } from '../src/component/Converter/Converter';
-import AppState from '../src/context/AppState';
+import { AppState } from '../src/context/AppState';
 
 const meta: Meta = {
   title: 'UI Currency Converter',

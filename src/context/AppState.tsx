@@ -7,7 +7,7 @@ interface Type {
   children: React.ReactNode;
 }
 
-const AppState = (props: Type) => {
+export const AppState = (props: Type) => {
   // const initial_state = {
   //   loading: false,
   //   sending_country: '',
@@ -28,5 +28,3 @@ const AppState = (props: Type) => {
     </AppContext.Provider>
   );
 };
-
-export default AppState;
