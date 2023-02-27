@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-// import { AppState } from '../../context/AppState';
+import { AppState } from '../../context/AppState';
 import { Currency } from '../Currency';
 import Button from '../form/Button';
 import AppContext from '../../context/app_context';
@@ -46,25 +46,25 @@ export const Converter = () => {
   };
 
   return (
-    // <AppState>
-    <div className="w-fit">
-      <Currency
-        title={'You send'}
-        value={send}
-        on_change={set_send}
-        read_only={false}
-        type={'text'}
-      />
-      <div className="h h-10 border-l-2 border-dotted ml-6 bg-slate-800 w-fit"></div>
-      <Currency
-        title={'You receive'}
-        read_only={true}
-        value={state.receiving_amount.toString()}
-        type={'text'}
-        on_change={set_receive}
-      />
-      <Button title={'Convert'} on_click={handle_conversion} />
-    </div>
-    // </AppState>
+    <AppState>
+      <div className="w-fit">
+        <Currency
+          title={'You send'}
+          value={send}
+          on_change={set_send}
+          read_only={false}
+          type={'text'}
+        />
+        <div className="h h-10 border-l-2 border-dotted ml-6 bg-slate-800 w-fit"></div>
+        <Currency
+          title={'You receive'}
+          read_only={true}
+          value={state.receiving_amount.toString()}
+          type={'text'}
+          on_change={set_receive}
+        />
+        <Button title={'Convert'} on_click={handle_conversion} />
+      </div>
+    </AppState>
   );
 };
