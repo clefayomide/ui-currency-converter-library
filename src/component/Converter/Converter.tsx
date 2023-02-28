@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { AppState } from '../../context/AppState';
+// import { AppState } from '../../context/AppState';
 import { Currency } from '../Currency';
 import Button from '../form/Button';
 import AppContext from '../../context/app_context';
@@ -46,7 +46,7 @@ export const Converter = () => {
   };
 
   return (
-    <AppState>
+    // <AppState>
       <div className="w-fit">
         <Currency
           title={'You send'}
@@ -65,6 +65,6 @@ export const Converter = () => {
         />
         <Button title={'Convert'} on_click={handle_conversion} />
       </div>
-    </AppState>
+    // </AppState>
   );
 };
