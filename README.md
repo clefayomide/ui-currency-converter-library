@@ -21,8 +21,9 @@ npm install @clefayomide/ui-currency-converter
 
 or, `yarn`
 
-````bash
+```bash
 yarn add @clefayomide/ui-currency-converter
+```
 
 ### Usage
 
