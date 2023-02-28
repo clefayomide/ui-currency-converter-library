@@ -39,7 +39,7 @@ Import `Converter` and `AppState`.
 
 ```javascript
 import { Converter, AppState } from "@clefayomide/ui-currency-converter";
-````
+```
 
 Wrapping things up
 
