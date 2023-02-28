@@ -32,7 +32,7 @@ Edit content array in `tailwind.config.js` to target path
 ```javascript
 content: [
     './node_modules/@clefayomide/ui-currency-converter/**/*.{js,jsx,ts,tsx}'
-    [comment]: <> (...other paths according to tailwind configuration)
+    ...other paths according to tailwind configuration
   ]
 ```
 
