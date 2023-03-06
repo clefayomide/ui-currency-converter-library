@@ -48,7 +48,7 @@ export const Converter = (props: {
   };
 
   return (
-    <div className="w-full md:w-fit bg-inherit">
+    <div className="w-full md:w-fit bg-none">
       <Currency
         title={'You send'}
         value={send}

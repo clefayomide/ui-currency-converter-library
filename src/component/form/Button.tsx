@@ -13,7 +13,7 @@ const Button = (props: {
         backgroundColor: `${props.buttonBG}`,
         height: `${props.buttonHeight}`,
       }}
-      className="text-white bg-blue-500 h-12 mt-5 rounded-md w-full md:w-[300px]"
+      className="text-white outline-none border-none focus:border-none focus:outline-none bg-blue-500 h-12 mt-5 rounded-md w-full md:w-[300px]"
     >
       {props.title}
     </button>
