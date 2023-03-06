@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Converter } from '../src/component/Converter/Converter';
-import { AppState } from '../src/context/AppState';
+import { Converter } from './Converter';
+import { AppState } from '../../context/AppState';
 
 const meta: Meta = {
   title: 'UI Currency Converter',
@@ -15,24 +15,26 @@ const meta: Meta = {
       );
     },
   ],
-  //   argTypes: {
-  //     children: {
-  //       control: {
-  //         type: 'text',
-  //       },
-  //     },
-  //   },
-  // parameters: {
-  //   controls: { expanded: true },
-  // },
 };
 
-export default meta;
-
-const Template: Story = args => <Converter {...args} />;
+const Template: Story = args => {
+  return <Converter {...args} />;
+};
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+  buttonBG: '#3B82F6',
+  buttonHeight: '48px',
+};
+
+Default.argTypes = {
+  buttonBG: {
+    control: { type: 'color' },
+    description: 'HEX Color code',
+  },
+};
+
+export default meta;

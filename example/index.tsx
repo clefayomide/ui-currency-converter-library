@@ -1,14 +1,17 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Thing } from '../.';
+import { Converter } from '../src/component/Converter/Converter';
+import { createRoot } from 'react-dom/client';
 
 const App = () => {
   return (
     <div>
-      <Thing />
+      <Converter />
     </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// createRoot(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+root.render(<App />);

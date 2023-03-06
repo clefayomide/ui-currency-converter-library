@@ -5,7 +5,10 @@ import AppContext from '../../context/app_context';
 import axios from 'axios';
 import { ActionType } from '../../context/actions';
 
-export const Converter = () => {
+export const Converter = (props: {
+  buttonBG?: string;
+  buttonHeight?: string;
+}) => {
   const { state, dispatch } = useContext(AppContext);
 
   const [send, set_send] = useState('');
@@ -45,7 +48,7 @@ export const Converter = () => {
   };
 
   return (
-    <div className="w-full md:w-fit">
+    <div className="w-full md:w-fit bg-inherit">
       <Currency
         title={'You send'}
         value={send}
@@ -61,7 +64,12 @@ export const Converter = () => {
         type={'text'}
         on_change={set_receive}
       />
-      <Button title={'Convert'} on_click={handle_conversion} />
+      <Button
+        title={'Convert'}
+        on_click={handle_conversion}
+        buttonBG={props.buttonBG || '#3B82F6'}
+        buttonHeight={props.buttonHeight || '48px'}
+      />
     </div>
   );
 };
