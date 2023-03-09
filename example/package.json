@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.tsx",
+    "build": "parcel build index.tsx"
   },
   "dependencies": {
     "react-app-polyfill": "^1.0.0"

@@ -23,7 +23,6 @@ export const Currency = (props: PropTypes) => {
   const [countrySearch, setCountrySearch] = useState([]);
 
   const [searchInput, setSearchInput] = useState('');
-  // const [send, setSend] = useState("");
 
   useEffect(() => {
     setCurrentCountry(countries[0]);
@@ -42,7 +41,7 @@ export const Currency = (props: PropTypes) => {
       (country: any) => country.name.common === name
     );
     const { currencies } = countrys[index];
-    // const currency_abbrev = Object.keys(countrys[index].currencies);
+
     const currency_abbrev = Object.keys(currencies);
 
     setCurrentCountry(countrys[index]);
@@ -60,8 +59,8 @@ export const Currency = (props: PropTypes) => {
   };
 
   return (
-    <div className="w-full md:w-[300px] relative">
-      <div className="flex w-full items-center justify-between rounded-md bg-slate-100 pr-3 pl-3">
+    <div className="w-full md:w-[300px] relative bg-slate-100 rounded-md">
+      <div className={`flex w-full items-center justify-between pr-3 pl-3`}>
         <div className="pt-2 pb-[8.5px] w-1/2">
           <div className="pb-1 text-xs text-blue-500">{props.title}</div>
           <Input
@@ -74,7 +73,7 @@ export const Currency = (props: PropTypes) => {
             read_only={props.read_only}
           />
         </div>
-        <div className="h-full w-1/2 flex items-center gap-3 border-l border-black pl-5">
+        <div className="h-full w-1/2 flex justify-end md:justify-start items-center gap-3 border-l border-black pl-5">
           <img
             src={currentCountry?.flags?.svg}
             className="object-contain w-10 h-5"
@@ -109,7 +108,7 @@ export const Currency = (props: PropTypes) => {
         </div>
       </div>
       {openSearch && (
-        <div className="absolute w-full z-20 bg-slate-100 p-3 mt-1 rounded-md">
+        <div className="absolute w-full z-20 bg-inherit p-3 mt-1 rounded-md">
           <Input
             height={'h-10'}
             type="text"
@@ -120,8 +119,8 @@ export const Currency = (props: PropTypes) => {
             read_only={false}
           />
           <div
-            className="max-h-[200px] min-h-fit overflow-y-scroll scrollbar-thin"
-            style={styles}
+            className="max-h-[200px] min-h-fit overflow-y-scroll scrollbar-none"
+            // style={styles}
           >
             {countrySearch.length > 0 ? (
               countrySearch.map((country: any) => (
@@ -148,8 +147,4 @@ export const Currency = (props: PropTypes) => {
       )}
     </div>
   );
-};
-
-const styles: React.CSSProperties = {
-  scrollbarWidth: 'none',
 };

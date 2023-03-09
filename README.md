@@ -31,15 +31,15 @@ Edit content array in `tailwind.config.js` to target path
 
 ```javascript
 content: [
-    './node_modules/@clefayomide/ui-currency-converter/**/*.{js,jsx,ts,tsx}'
-    // ...other paths according to tailwind configuration 
-  ]
+  './node_modules/@clefayomide/ui-currency-converter/**/*.{js,jsx,ts,tsx}',
+  // ...other paths according to tailwind configuration
+];
 ```
 
 Import `Converter` and `AppState`.
 
 ```javascript
-import { Converter, AppState } from "@clefayomide/ui-currency-converter";
+import { Converter, AppState } from '@clefayomide/ui-currency-converter';
 ```
 
 Wrapping things up
@@ -49,6 +49,15 @@ Wrapping things up
   <Converter />
 </AppState>
 ```
+
+## Props
+
+Available props:
+
+| Prop           | Description                                                                                  |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| `buttonBG`     | overrides convert button default background color, must be in HEX format. i.e, `#ffffff`     |
+| `buttonHeight` | overrides convert button default height, preferably in px or rem format. i.e, `12px || 3rem` |
 
 ## Disclaimer
 
@@ -61,5 +70,3 @@ If any issues are found, they can be reported [here](https://github.com/clefayom
 ## License
 
 This project is licensed under the [MIT](LICENSE) license.
-
-
